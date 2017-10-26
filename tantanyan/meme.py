@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+from tantanyan.utils import config
 
 class Meme:
     def __init__(self, bot):
