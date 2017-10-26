@@ -1,0 +1,11 @@
+tantanyan.help
+tantanyan.user
+tantanyan.pso2
+tantanyan.meme
+tantanyan.admin
+tantanyan.server
+tantanyan.translate
+tantanyan.other
+tantanyan.test
+tantanyan.season_event
+tantanyan.utils.take_data
