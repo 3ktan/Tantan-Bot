@@ -44,7 +44,7 @@ class Help_module:
         embed = discord.Embed(
             title=self.bot.user.name,
             colour=discord.Colour.teal(),
-            description="About bot: Phantasy Star Online 2 & Kantai Collection (kancolle)\n"
+            description="About bot: A tsundere bot. She like Pso2 & Kankolle. \n"
                         "Support: https://discord.gg/86SXwYJ \n"
                         "Invite bot to your server: https://goo.gl/VM2xRn"
         )

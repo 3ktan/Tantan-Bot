@@ -2,6 +2,7 @@ import discord
 import aiohttp
 from discord.ext import commands
 from bs4 import BeautifulSoup
+from tantanyan.utils import config
 
 class Translate:
     '''
@@ -32,6 +33,7 @@ class Translate:
             result = str(translate).split('class="t0">')[1].split("</div>")[0]
             result = BeautifulSoup(result, "html.parser").text
             embed = discord.Embed(color=discord.Color.green())
+            embed.add_field(name="Success", value="Here are your search results: " + ctx.author.mention, inline=False)
             embed.add_field(name="Original", value=msg, inline=False)
             embed.add_field(name=language, value=result.replace("&amp;", "&"), inline=False)
             if result == msg:
@@ -51,6 +53,7 @@ class Translate:
         result = str(translate).split('class="t0">')[1].split("</div>")[0]
         result = BeautifulSoup(result, "html.parser").text
         embed = discord.Embed(color=discord.Color.green())
+        embed.add_field(name="Success", value="Here are your search results: " + ctx.author.mention, inline=False)
         embed.add_field(name="Original", value=msg, inline=False)
         embed.add_field(name="English", value=result.replace("&amp;", "&"), inline=False)
         await ctx.send("", embed=embed)

@@ -1,4 +1,4 @@
 # Tantanyan
-A simple bot is written in Python
+A simple bot for discord is written in Python
 # Note:
 And the code is ugly, I know ._."

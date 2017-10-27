@@ -127,6 +127,7 @@ class Meme:
                                 "http://i.imgur.com/A8Fmt4Z.png",
                                 "http://i.imgur.com/seUOidB.jpg",
                                 "http://i.imgur.com/bmjq17i.jpg",
+                                "https://cdn.discordapp.com/attachments/270766856984461312/372957450925768704/22792153_10212876557001148_6732281705568977746_o.jpg",
                                 "http://i.imgur.com/yNqtdVX.jpg",
                                 "https://i.imgur.com/xAQw8pK.gif",
                                 "http://i2.kym-cdn.com/photos/images/newsfeed/000/936/668/a3e.jpg",

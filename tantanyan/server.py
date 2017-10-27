@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from akebono.utils import check
+from tantanyan.utils import config, check
 
 
 class Server_module:
