@@ -31,8 +31,8 @@ class Ship:
 
     def embed_form(self):
         embed = discord.Embed(
-            title=self.seiyuu,
-            colour=discord.Colour.blue(),
+            title=self.all_forms["name"],
+            colour=discord.Colour.green(),
             )
         embed.add_field(
             name=format(self.all_forms["name"]),
@@ -66,13 +66,10 @@ class Kancolle:
         for ship in self.ship_library:
             check = True
             for word in name.split():
-                if word.lower() not in ship.nameEN.lower():
+                if word.lower() not in ship.all_forms['name'].lower():
                     check = False
                     break
             if check:
-                result.append(ship)
-        if not result:
-            for ship in self.ship_library:
                 result.append(ship)
         if len(result) > 1:
             for ship in result:
