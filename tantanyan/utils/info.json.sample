@@ -1,8 +1,0 @@
-{
-    "token": "your bot token",
-    "prefix": "//",
-    "admin_id": "your user id",
-    "sever_test_id": "323727595914919957"
-}
-// fill in the necessary information: token, admin_id.....
-// change file name from info.json.sample to info.json

@@ -1,0 +1,5 @@
+{
+    "token": "your bot token",
+    "prefix": "//",
+}
+// change file name from token.json.sample to token.json

@@ -1,12 +1,10 @@
 from discord.ext import commands
 import random
-from tantanyan.utils import config
-
-data = config.load_info()
+from tantanyan.utils import config, id
 
 def is_owner():
     async def check_func(ctx):
-        if str(ctx.message.author.id) == data["admin_id"]:
+        if ctx.message.author.id == id.admin_id:
             return True
         else:
             x = random.choice([ctx.author.mention + " go away",
