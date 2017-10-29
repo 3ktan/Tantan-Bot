@@ -64,7 +64,7 @@ class Other:
         await ctx.send('Pong! Took {}ms'.format(delta.microseconds // 1000))
 
     # countdown
-    @commands.command(name='countdown', hidden=True)
+    @commands.command(aliases=['count'], hidden=True)
     async def countdown(self, ctx, seconds: int):
         from asyncio import sleep
         if seconds > 3600:
@@ -83,8 +83,8 @@ class Other:
             await ctx.send(format(ctx.author.mention) + ", countdown from `" + str( seconds) + "`: Done")
 
     #seach on utube
-    @commands.command(pass_context=True, name='utb', no_pm=True)
-    async def _youtube(self, ctx,*, context: str):
+    @commands.command(pass_context=True, aliases=["utb",], no_pm=True)
+    async def youtube(self, ctx,*, context: str):
         try:
             url = 'https://www.youtube.com/results?'
             payload = {'search_query': ''.join(context)}
