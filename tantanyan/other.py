@@ -57,10 +57,11 @@ class Other:
             await ctx.send(x)
 
     #ping
-    #i have no idea why i code this
     @commands.command(hidden=True)
     async def ping(self, ctx):
-        await ctx.send("Pong")
+        now = datetime.datetime.now()
+        delta = now - ctx.message.created_at
+        await ctx.send('Pong! Took {}ms'.format(delta.microseconds // 1000))
 
     # countdown
     @commands.command(name='countdown', hidden=True)
