@@ -21,12 +21,10 @@ description="""
 I am a bot written by 3ktan
 """
 
-
 load = config.load_info()
 token = load["token"]
 prefix = load["prefix"]
 bot = commands.Bot(command_prefix=when_mentioned_or(prefix), description=description)
-
 @bot.event
 async def on_ready():
     print("Logged in....")
