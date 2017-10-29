@@ -1,0 +1,539 @@
+{
+    "header": {
+        "name": "Akagi 赤城",
+        "seiyuu": "Fujita Saki (藤田咲)",
+        "availability": "Construction (Normal, LSC)\nDrop",
+        "artist": "Shibafu (しばふ)",
+        "implement_on": "2013-4-23"
+    },
+    "all_forms": [
+        {
+            "form": "Basic",
+            "name": "Akagi",
+            "id": "No.6 赤城",
+            "class": "Akagi Class Standard Carrier",
+            "pic_url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a4/CV_Akagi_083_Card.jpg/revision/latest?cb=20150519024231",
+            "statistics": {
+                "hp": "69 (71)",
+                "firepower": "0 (39)",
+                "armor": "28 (54)",
+                "torpedo": "0",
+                "evasion": "28 (49)",
+                "aa": "32 (69)",
+                "aircraft": "73",
+                "asw": "0",
+                "speed": "Fast",
+                "los": "44 (69)"
+            },
+            "resource_consumption": {
+                "fuel": "60",
+                "ammo": "55"
+            },
+            "build": {
+                "build_time": "04:30:00 (Normal, LSC)",
+                "slots": "4"
+            },
+            "equipment": {
+                "stock_equipment": [
+                    "Type 0 Fighter Model 21",
+                    "Type 99 Dive Bomber",
+                    "Type 97 Torpedo Bomber",
+                    "- Unequipped -"
+                ],
+                "space": [
+                    "18",
+                    "18",
+                    "27",
+                    "10"
+                ]
+            },
+            "extra_stats": {
+                "modernization_bonus": [
+                    [
+                        "aa",
+                        "+5"
+                    ],
+                    [
+                        "armor",
+                        "+3"
+                    ]
+                ],
+                "scrap_value": [
+                    [
+                        "fuel",
+                        "8"
+                    ],
+                    [
+                        "ammunition",
+                        "12"
+                    ],
+                    [
+                        "steel",
+                        "30"
+                    ],
+                    [
+                        "bauxite",
+                        "7"
+                    ]
+                ],
+                "improvement": "[−]  Equipment that can be improved with Akagi as helper ship\n  Type 0 Fighter Model 21\n\n  Type 0 Fighter Model 21 (Skilled)\n\n  Type 0 Fighter Model 32\n\n  Type 0 Fighter Model 32 (Skilled)"
+            }
+        },
+        {
+            "form": "Upgrade",
+            "name": "Akagi Kai",
+            "id": "No.6 赤城改",
+            "class": "Akagi Class Standard Carrier",
+            "pic_url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/CV_Akagi_Kai_277_Card.jpg/revision/latest?cb=20150519052943",
+            "statistics": {
+                "hp": "77 (79)",
+                "firepower": "0 (54)",
+                "armor": "40 (79)",
+                "torpedo": "0",
+                "evasion": "28 (69)",
+                "aa": "35 (79)",
+                "aircraft": "82",
+                "asw": "0",
+                "speed": "Fast",
+                "los": "50 (89)"
+            },
+            "resource_consumption": {
+                "fuel": "75",
+                "ammo": "75"
+            },
+            "build": {
+                "remodel_level": "Level 30",
+                "slots": "4"
+            },
+            "equipment": {
+                "stock_equipment": [
+                    "Type 0 Fighter Model 52",
+                    "Suisei",
+                    "Type 97 Torpedo Bomber",
+                    "- Unequipped -"
+                ],
+                "space": [
+                    "20",
+                    "20",
+                    "32",
+                    "10"
+                ]
+            },
+            "extra_stats": {
+                "remodel_cost": [
+                    [
+                        "ammunition",
+                        "300"
+                    ],
+                    [
+                        "steel",
+                        "700"
+                    ]
+                ],
+                "modernization_bonus": [
+                    [
+                        "aa",
+                        "+5"
+                    ],
+                    [
+                        "armor",
+                        "+4"
+                    ]
+                ],
+                "scrap_value": [
+                    [
+                        "fuel",
+                        "10"
+                    ],
+                    [
+                        "ammunition",
+                        "15"
+                    ],
+                    [
+                        "steel",
+                        "35"
+                    ],
+                    [
+                        "bauxite",
+                        "12"
+                    ]
+                ],
+                "improvement": "[−]  Equipment that can be improved with Akagi Kai as helper ship\n  Type 0 Fighter Model 21\n\n  Type 0 Fighter Model 21 (Skilled)\n\n  Type 0 Fighter Model 32\n\n  Type 0 Fighter Model 32 (Skilled)"
+            }
+        }
+    ],
+    "quotes": {
+        "quotes": [
+            [
+                "form",
+                "quote_url",
+                "event",
+                "jp",
+                "en",
+                "note"
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/c/c2/Akagi-Introduction.ogg/revision/latest?cb=20150201202705",
+                "Introduction",
+                "航空母艦、赤城です。空母機動部隊を編成するなら、私にお任せ下さいませ。",
+                "I'm the aircraft carrier Akagi. If you're forming a carrier division, just leave it to me.",
+                "Referring to the 1st Air Fleet, also known as Kido Butai (lit. Mobile unit/force) where she was flagship."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Akagi-Library.ogg/revision/latest?cb=20150201202713",
+                "Library",
+                "航空母艦、赤城です。空母機動部隊の主力として快進撃を支えます。日頃鍛錬を積んだ自慢の艦載機との組み合わせは、無敵艦隊とも言われたんです。 慢心...ですって?ううん、そうかなあ......気をつけますね。",
+                "I'm the aircraft carrier, Akagi.As part of the core of the Mobile Strike Force, I support the victorious advances.Together with my pride experienced planes, we were called the invincible fleet. Overconfident, you say...?Hmm, perhaps so...I'll keep that in mind.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Akagi-Secretary_1.ogg/revision/latest?cb=20150201202724",
+                "Secretary 1",
+                "流星? 九七艦攻とは違うのですか?",
+                "Ryuusei? Is that different from Type 97 Torpedo Bomber?",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Akagi-Secretary_2.ogg/revision/latest?cb=20150201202734",
+                "Secretary 2",
+                "烈風? いえ、知らない子ですね。",
+                "Reppuu? Never heard of her.",
+                "Both planes were introduced after Akagi was sunk."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/2/23/Akagi-Secretary_3.ogg/revision/latest?cb=20150201202741",
+                "Secretary 3",
+                "作戦会議でしょうか?",
+                "Are we hold a strategic meeting?",
+                "Akagi was her division's flagship under Rear Admiral Sankichi Takahashi."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/6/64/Akagi-Idle.ogg/revision/latest?cb=20150201202752",
+                "Idle",
+                "あの、提督?ごは...あっ、いえ、作戦開始はまだでしょうか!?",
+                "Um, Admiral? Is it mealti-No! Is it time to start the strategy meeting yet!?",
+                "Akagi's habit of eating a lot is starting to be more apparent."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Akagi-Secretary_Married.ogg/revision/latest?cb=20150201202821",
+                "Secretary Married",
+                "一航戦赤城、いつでも出撃可能です!提督は、少しお休みになっていて下さい。",
+                "1st Carrier Division, Akagi, always ready to deploy! Admiral, please take a break sometime.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/e/e8/Akagi-Wedding.ogg/revision/latest?cb=20150201202838",
+                "Wedding",
+                "提督、提督となら運命の5分間を塗り変える事が出来そうです。頑張ります。",
+                "Admiral, if I'm with you, I might be able to change that fateful 5 minutes. I will do my best.",
+                "Akagi was, essentially, sunk during the \"five fateful minutes\" of the Battle of Midway."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/c/ca/Akagi-Looking_At_Scores.ogg/revision/latest?cb=20150201202850",
+                "Looking At Scores",
+                "提督、通信が入っています。",
+                "There's a message for you, Admiral.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/0/00/Akagi-Joining_A_Fleet.ogg/revision/latest?cb=20160309230232",
+                "Joining A Fleet",
+                "慢心してはダメ。全力で参りましょう!",
+                "We must not be too confident. Let's head out with all our might!",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Akagi-Equipment_1.ogg/revision/latest?cb=20150201202913",
+                "Equipment 1",
+                "近代化改修、ありがとうございます。",
+                "Thank you very much for the modernization.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/c/c9/Akagi-Equipment_2.ogg/revision/latest?cb=20150201202920",
+                "Equipment 2",
+                "三段式甲板は・・・要りませんよね?",
+                "I guess... the triple flight decks are not needed.",
+                "Akagi was first built with three flight decks but then re-built into a single deck carrier."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/6/64/Akagi-Equipment_3.ogg/revision/latest?cb=20150201202929",
+                "Equipment 3",
+                "上々ね。",
+                "Going as planned.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/6/6f/Akagi-Supply.ogg/revision/latest?cb=20150201202938",
+                "Supply",
+                "艦載機の補充もありがとうございます。助かります。",
+                "Thank you very much for resupplying my planes. It helps me a lot.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/8/8d/Akagi-Docking_Minor.ogg/revision/latest?cb=20150201202948",
+                "Docking Minor",
+                "次の作戦に備えますね。",
+                "I'll be preparing for the next operation.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/e/e7/Akagi-Docking_Major.ogg/revision/latest?cb=20150201202955",
+                "Docking Major",
+                "飛行甲板の修復に少し時間がかかりそう。",
+                "It seems like it will take a little time to repair the flight deck.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/3/31/Akagi-Docking_Complete.ogg/revision/latest?cb=20150326021331",
+                "Docking Complete",
+                "入渠中の艦の修理が完了しました。",
+                "The repairs for the docked ships have completed.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/1/17/Akagi-Construction.ogg/revision/latest?cb=20150201203003",
+                "Construction",
+                "機動部隊に、新しい艦が参加出来ます。",
+                "A new vessel can take part in the task force.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/7/72/Akagi-Returning_From_Sortie.ogg/revision/latest?cb=20150201203012",
+                "Returning From Sortie",
+                "艦隊が帰投しました。",
+                "The fleet has returned.",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/4/44/Akagi-Starting_A_Sortie.ogg/revision/latest?cb=20150201203040",
+                "Starting A Sortie",
+                "南雲機動部隊、出撃します!",
+                "Nagumo task force, sortie!",
+                "Pre-Midway IJN CVBG. Nickname of the 1st Air Fleet, lead by vice-Admiral Chūichi Nagumo."
+            ],
+            [
+                "Kai",
+                "https://vignette.wikia.nocookie.net/kancolle/images/c/c6/AkagiKai-Starting_A_Sortie.ogg/revision/latest?cb=20150723015352",
+                "Kai",
+                "必ず敵の機動部隊は出てくるはず。 加賀さんと私の一航戦の誇り、お見せします!",
+                "The enemy's task force will definitely be present. Kaga-san and I will show you our pride as the 1st CarDiv!",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/0/08/Akagi-Battle_Start.ogg/revision/latest?cb=20150201203049",
+                "Battle Start",
+                "第一次攻撃隊、発艦して下さい!",
+                "First attack squadron, launch!",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Akagi-Air_Battle.ogg/revision/latest?cb=20150201203101",
+                "Air Battle",
+                "艦載機の皆さん、用意はいい?",
+                "All aircrafts, are you ready?",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/c/ca/Akagi-Attack.ogg/revision/latest?cb=20150201204102",
+                "Attack",
+                "装備換装を急いで!",
+                "Hurry with the equipment switch!",
+                "Akagi was struck by only a handful of bombs (possibly only one), but since she was in the middle of re-arming and refueling (bombs and fuel in the hangar rather than safe in magazines), the explosion lit the fuel and detonated some of the bombs."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/8/8f/Akagi-Night_Battle.ogg/revision/latest?cb=20150201203724",
+                "Night Battle",
+                "第二次攻撃隊、全機発艦!",
+                "Second attack squad, launch!",
+                ""
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/4/48/Akagi-MVP.ogg/revision/latest?cb=20150201203852",
+                "MVP",
+                "この勝利で慢心しては駄目。索敵や先制を大事にしないと...って、頭の中で何かが...",
+                "We must not become complacent following this victory. Reconnaissance and being proactive is the key... wait... what is this that sparked in my head?",
+                "The overwhelming superiority of the 1st Carrier Division in the early stages of the war had led to the underestimation of U.S. naval power, which, together with poor scouting and other factors, caused the IJN's catastrophic defeat at Midway and the sinking of Akagi-sama."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/3/35/Akagi-Minor_Damage_1.ogg/revision/latest?cb=20150201203908",
+                "Minor Damage 1",
+                "真上...直上!?",
+                "Straight above!?  Directly above!?",
+                "A reference to when Akagi, Kaga and Souryuu were hit by dive-bombers that slipped nearly undetected until the very moment they started their attack."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/8/86/Akagi-Minor_Damage_2.ogg/revision/latest?cb=20150201203936",
+                "Minor Damage 2",
+                "きゃぁっ!誘爆を防いで!!",
+                "Aah! ...Stop  sympathetic detonation!",
+                "Akagi was heavily damaged by secondary explosions from armaments left on deck during equipment switch when she was attacked by american dive bombers."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/5/51/Akagi-Major_Damage.ogg/revision/latest?cb=20150201203946",
+                "Major Damage",
+                "一航戦の誇り...こんなところで失うわけには...",
+                "I cannot let the pride of the first Carrier Division be lost here...",
+                "1st Carrier Division was IJN's top carrier fleet throughout WW2."
+            ],
+            [
+                "Base",
+                "https://vignette.wikia.nocookie.net/kancolle/images/a/aa/Akagi-Sunk.ogg/revision/latest?cb=20150201204117",
+                "Sunk",
+                "ごめんなさい...雷撃処分...してください......",
+                "My apologies... Please... scuttle me with the torpedoes.",
+                "Akagi was scuttled under the orders of Yamamoto, carried out by the 4th Destroyer fleet, where Maikaze was one of them."
+            ]
+        ],
+        "hourly_notifications": [
+            [
+                "form",
+                "quote_url",
+                "event",
+                "jp",
+                "en",
+                "note"
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/1/11/Akagi_Second_Anniversary.ogg/revision/latest?cb=20150423045010",
+                "Second Anniversary 2015",
+                "提督、加賀さん、私たち、二周年を迎えました。本当にうれしいですね。感謝です。",
+                "Admiral, Kaga-san, we’ve reached our second anniversary! I’m very happy, my thanks!",
+                "****"
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/e/e4/Akagi_Rainy_Season_2015.ogg/revision/latest?cb=20150518142549",
+                "Rainy Season 2015",
+                "梅雨の季節ですね。また雨...こんな日は「間宮」で息抜きもいいですね、提督。提督?",
+                "It is the Rainy Season. Rainy today as well... On a day like this, taking a break at ‘Mamiya’ sounds nice too. Right, Admiral? Admiral?",
+                "Everyone, run with your bauxites!"
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/a/a2/Akagi_Early_Summer_2015.ogg/revision/latest?cb=20150626114934",
+                "Early Summer 2015",
+                "あら、加賀さん。もうすぐ夏ね。え?新しい水着ですか。特に用意してないけれど...",
+                "Oh, Kaga-san. Summer is coming. Eh? A new swimsuit? I had not thought about preparing it...",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/3/37/Akagi_Christmas_2015.ogg/revision/latest?cb=20151208065750",
+                "Christmas 2015",
+                "これは......!おいしっ!これも、クリスマス......!いいですね。あっ、加賀さんも、食べてます?",
+                "This is... Delicious. These are Christmas indeed. Ah, would you like some, Kaga-san?",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/5/5b/Akagi_End_of_Year_2015.ogg/revision/latest?cb=20151229082547",
+                "End of Year 2015",
+                "さあ、一航戦も年末の大掃除をしましょう。格納庫も甲板も磨いて・・・うん、上々ね。",
+                "Right. The 1st Carrier Division will proceed with the end-year spring cleaning as well. Cleaning up the hangar and the flight deck and... Yep, It's superb.",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/2/2e/Akagi_New_Year_2016.ogg/revision/latest?cb=20151231191826",
+                "New Year 2016",
+                "提督、一航戦、新年のご挨拶に参りました!本年も、どうぞよろしくお願い致します!",
+                "Admiral. We, the 1st Carrier Division is present to greet you on this new year. It is a pleasure to be of service for this year.",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/9/9a/Akagi_Setsubun_2016.ogg/revision/latest?cb=20160119082202",
+                "Setsubun 2016",
+                "節分ね。このお豆を、鬼役の軽巡に......って、あら、おいし! 意外! あら、いけますね~♪",
+                "It's Setsubun. So I throw this bean at the light cruiser playing the demon role... Wait! Oh my, it's delicious~ Surprisingly... Oh dear! Ihts goohd~",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/1/15/Akagi_Valentines_2016.ogg/revision/latest?cb=20160212170129",
+                "Valentines Day 2016",
+                "提督、こちらのチョコ、良かったら・・・。あっ、はい!お返しなんて要りません、ふふふ",
+                "Admiral, If you want please have these chocolates, oh you don't need to pay me back. fufufu♪",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Akagi_White_Day_2016.ogg/revision/latest?cb=20160311130449",
+                "White Day 2016",
+                "提督、このクッキーをチョコのお返しに?こんなにたくさん?あ、では一つ...むーー、美味しい!",
+                "Admiral, these cookies are a return gift for my chocolate? All of these? Well then, I'll have a bite... Mmmmm~ Delicious~!",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Akagi_Third_Anniversary.ogg/revision/latest?cb=20160422083140",
+                "Third Anniversary 2016",
+                "提督、今日は私達一航戦にとっても大切な日。これからも宜しくお願いたします!",
+                "Admiral, today is an important day to us CarDiv 1. Here's to another year working together with you!",
+                ""
+            ],
+            [
+                null,
+                "https://vignette.wikia.nocookie.net/kancolle/images/e/e4/Akagi_Rainy_Season_2015.ogg/revision/latest?cb=20150518142549",
+                "Rainy Season 2016",
+                "梅雨の季節ですね。また雨...こんな日は「間宮」で息抜きもいいですね、提督。提督?",
+                "It is the rainy season. It is rainy today as well.... On a day like this, taking a break at ‘Mamiya’ sounds nice, too. Right, Admiral. Admiral?",
+                "From Rainy Season 2015"
+            ]
+        ]
+    },
+    "character": "\n▪Appearance\nAkagi has long brown hair flowing down straightly. She wears a chest protector (muneate) over white and red clothes and wields a bow and arrows. Her flight decks, one on right arm and another around her waist, features katakana ア(A), referring to her real-life identification mark.\n▪Personality\nAkagi is shown as a compassionate woman with a gentle, easy-going personality. She is a foil to Kaga, behaving openly and cheerfully; whereas Kaga often is seen with little to no emotion around others.\nA personality quirk notable with Akagi is her gluttonous side; most notably seen in the anime, when she will usually consume a larger portion of food than other kanmusu. Lots of fan art of Akagi depicts her gluttonous side and show her voracious appetite.\n▪Appearances in derivative works\nAkagi was one of the first characters confirmed to appear in the anime adaptation of Kantai Collection, and was also featured in the adaptation's first trailer.\n Sings \"Akatsuki No Suiheisen Ni\" with Shoukaku in music album KanColle Vocal Collection (Vol.1).\n In the CCG Weiß Schwarz by Bushiroad, a special version of Akagi is available as a bonus character for the KanColle deck by purchasing more than 4 packs from a certain vendor. The quote on her card is \"ボーキサイトの女王と呼んだ人は誰ですか?\" which works out as \"Who's the one calling me the Queen of Bauxite?\" and her card title is \"いらっしゃいませ! 赤城\" which translates as \"Welcome, Akagi!\". She also has very different character art.\n",
+    "trivia": "Scuttled on June 5th, 1942 by IJN destroyers Arashi, Hagikaze, Maikaze, and Nowaki after being heavily damaged by dive bombers from USS Enterprise. Although almost all of her aircrafts attacked Kaga, three of them broke off the formation to bomb Akagi; the latter was only hit by a single yet fatal bomb dropped by Lt.Cmd Best.\nHer wreck is (possibly) at over 4500 meters below sea at the coordinates 30°30′53.8′′N 178°37′31.2′′W. Over 40 km east from Kaga's (possibly) wreck.\nObtainable from Quest B10.\nOriginally designed as an Amagi-class Battlecruiser, Akagi was converted to a carrier after the instigation of the Washington Naval Treaty in 1921.\nShe was the first Fleet Carrier commissioned by Japan. (Kaga was launched before Akagi, but was commissioned after her).\nHer moderate/heavily damaged CG is based on her historical damage condition after being attacked in the Battle of Midway, just like everyone else in the 1st and 2nd Carrier Division. Which was one hit near central elevator and a near miss off her stern (which caused her unable to move by herself) that was moved onto the flight deck on the CG. \nDubbed the \"Queen of Bauxite\" thanks to her reputation for eating up all the Bauxite reserves. Despite her rarity she's fairly accessible via an early quest, causing many new coming admirals to be shocked at her Bauxite-binging and long repair times.\nAnother explanation for the \"Bauxite Queen\" title: during early gameplay, there is a bug that made the aircraft carriers to resupply all of its planes instead of only the planes that was shot down resulting in a large amount of bauxite being consumed after each sortie, which has since been fixed. At that time, Akagi was the only fleet carrier available to most players due to most carrier-dropping areas were yet to be implemented.\n\nHer name literally means \"Red Castle\", and comes from Mount Akagi in Gunma Prefecture, Japan.\nShe shares her name with one of the Maya-class Gunboats from the 1880s.",
+    "cg_art": [
+        [
+            "Akagi",
+            "Normal",
+            "https://vignette.wikia.nocookie.net/kancolle/images/0/0d/CV_Akagi_083_Full.png/revision/latest?cb=20150519024252"
+        ],
+        [
+            "Akagi",
+            "Damaged",
+            "https://vignette.wikia.nocookie.net/kancolle/images/e/e2/CV_Akagi_083_Full_Damaged.png/revision/latest?cb=20150519024302"
+        ],
+        [
+            "Oyakodon",
+            "Normal",
+            "https://vignette.wikia.nocookie.net/kancolle/images/0/09/CV_Akagi_Oyakodon_860_Full.png/revision/latest?cb=20161005092652"
+        ],
+        [
+            "Oyakodon",
+            "Damaged",
+            "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/CV_Akagi_Oyakodon_860_Full_Damaged.png/revision/latest?cb=20161005092656"
+        ]
+    ]
+}

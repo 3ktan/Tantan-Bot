@@ -1,6 +1,7 @@
 tantanyan.help
 tantanyan.user
 tantanyan.pso2
+tantanyan.kancolle
 tantanyan.meme
 tantanyan.admin
 tantanyan.server
