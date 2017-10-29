@@ -28,6 +28,11 @@ class Ship:
         self.quests = quests,
         self.cg_art = cg_art,
 
+    @classmethod
+    def from_file(cls, name, file):
+        data = json.load(file)
+        new_ship = cls(data['all_forms']['name'], data['all_forms']['id'], data['all_forms']['class'])
+        return new_ship
 
     def embed_form(self):
         embed = discord.Embed(
@@ -40,11 +45,7 @@ class Ship:
         )
         return embed
 
-    @classmethod
-    def from_file(cls, name, file):
-        data = json.load(file)
-        new_ship = cls(data['all_forms']['name'], data['all_forms']['id'], data['all_forms']['class']  )
-        return new_ship
+
 
 class Kancolle:
     def __init__(self, bot, **kwargs):
@@ -61,7 +62,7 @@ class Kancolle:
                 new_chip = Ship.from_file(i[:-5], file)
                 self.ship_library.append(new_ship)
 
-    def _search(self, name):
+    def search(self, name):
         result = []
         for ship in self.ship_library:
             check = True
@@ -80,7 +81,7 @@ class Kancolle:
 
     @commands.command()
     async def ship(self, ctx, *, name: str):
-        result = self._search(name)
+        result = self.search(name)
         if not result:
             await ctx.send("Can't find "+format(name)+" in database.")
             return
