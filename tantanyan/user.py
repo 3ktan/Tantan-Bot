@@ -51,7 +51,6 @@ class Userinfo:
 
     @commands.command()
     async def avatar(self, ctx, txt: str = None):
-        """View bigger version of user's avatar. Ex: >info avi @user"""
         if txt:
             try:
                 user = ctx.message.mentions[0]
@@ -69,7 +68,12 @@ class Userinfo:
             avi = 'https://images.discordapp.net/avatars/' + user.avatar_url[35:-10]
         else:
             avi = user.avatar_url
-        em = discord.Embed(colour=0x708DD0)
+        em = discord.Embed(
+            title="Full Size",
+            url=avi,
+            colour=0x708DD0
+        )
+        em.set_author(name=user)
         em.set_image(url=avi)
         await ctx.send(embed=em)
 
