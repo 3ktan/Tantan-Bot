@@ -53,8 +53,18 @@ class Help_module:
             value="Facebook: https://www.facebook.com/3ktan/\n"
                   "Wordpress: http://3ktan.wordpress.com/\n"
                   "Twitter: https://twitter.com/3ktan/",
-            inline=True
+            inline=False
         )
+        # embed.add_field(
+        #     name="Server Count: ",
+        #     value=ctx.guild.member_count,
+        #     inline=True
+        # )
+        # embed.add_field(
+        #     name="Member Count: ",
+        #     value=ctx.guild.member_count,
+        #     inline=True
+        # )
         embed.set_thumbnail(
             url="https://i.imgur.com/nBpePWb.png"
         )
