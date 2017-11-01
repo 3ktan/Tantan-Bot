@@ -4,6 +4,7 @@ import random
 from .utils import check
 import aiohttp
 from tantanyan.utils import config
+import  traceback
 
 class admiral:
     def __init__(self,bot):
@@ -18,7 +19,7 @@ class admiral:
             self.bot.load_extension(extension)
             print("Reloading " + extension + "...Done'")
         except Exception as e:
-            print("Failed reloading {}: {}".format(extension, e))
+            print("Failed reloading {}:\n{}".format(extension, traceback.format_exc()))
 
     # reload all extension
     def reload_all_extensions(self):
@@ -31,7 +32,7 @@ class admiral:
                 self.bot.load_extension(extension)
                 print("Reloading " + extension + "...Done")
             except Exception as e:
-                print("Failed reloading {}: {}".format(extension, e))
+                print("Failed reloading {}:\n{}".format(extension, traceback.format_exc()))
 
 ########################## ADMIN COMMANDS ##########################
     #reload extension(s)
