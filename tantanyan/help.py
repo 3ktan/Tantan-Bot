@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from tantanyan.utils import config
+from tantanyan.utils import config, check
 
 
 class Help_module:
@@ -17,7 +17,8 @@ class Help_module:
                 description="Description: Phantasy Star Online 2 & Kantai Collection (kancolle)")
             embed.add_field(
                 name="Standard Commands List ",
-                value="`//inv`: Invite bot to your server\n"
+                value="`//mod`: commands for mod\n"
+                      "`//inv`: Invite bot to your server\n"
                       "`//about:` description about Bot & Athor\n"
                       "`//help user:` Get information about a user \n"
                       "`//help server:` Get information about a server \n"
@@ -55,18 +56,20 @@ class Help_module:
                   "Twitter: https://twitter.com/3ktan/",
             inline=False
         )
-        # embed.add_field(
-        #     name="Server Count: ",
-        #     value=ctx.guild.member_count,
-        #     inline=True
-        # )
-        # embed.add_field(
-        #     name="Member Count: ",
-        #     value=ctx.guild.member_count,
-        #     inline=True
-        # )
         embed.set_thumbnail(
             url="https://i.imgur.com/nBpePWb.png"
+        )
+        await ctx.send(embed=embed)
+
+    @help.command()
+    @check.mod_only()
+    async def mod(self, ctx):
+        embed = discord.Embed(
+            colour=discord.Colour.teal(),
+        )
+        embed.add_field(
+            name="Server:",
+            value="`//kick @someone`: kick someone out the server"
         )
         await ctx.send(embed=embed)
 
@@ -110,9 +113,9 @@ class Help_module:
                   "`//haha`: Lol \n"
                   "`//smug`: \n"
                   "`//teehee`: \n"
-                  "`//waa`: Wanna cry?\n"
-                  "`//wat`: Nani the facka? \n"
-                  "`//police`: Hello onii-chan, FBI waiting for you \n"
+                  "`//waa`,`//cry`: Wanna cry?\n"
+                  "`//wat`,`//nani`,`//wut`: Nani the facka? \n"
+                  "`//police`,`//mp`: Hello onii-chan, FBI waiting for you \n"
                   "`//salt`: Want some salt?\n"
         )
         await ctx.send(embed=embed)
@@ -124,7 +127,7 @@ class Help_module:
             colour=discord.Colour.teal(),
             description="")
         embed.add_field(
-            name="List commands",
+            name="List commands:",
             value="`//server`: about server\n"
                   "`//servericon`: server's icon\n"
         )

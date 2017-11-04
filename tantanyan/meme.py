@@ -7,6 +7,10 @@ class Meme:
     def __init__(self, bot):
         self.bot = bot
         self.links = {"bad": ("http://i.imgur.com/7Ny0ESJ.png",
+                              "https://cdn.weeb.sh/images/ByIcZUPuZ.gif",
+                              "https://cdn.weeb.sh/images/HkHFyIw_W.gif",
+                              "https://i.imgur.com/IgGro8f.jpg",
+                              "https://i.imgur.com/C4r251q.jpg",
                               "http://i.imgur.com/Z7dZfyl.jpg",
                               "http://i.imgur.com/NWbjLFL.gif",
                               "http://i.imgur.com/miuPFoR.jpg",
@@ -34,6 +38,7 @@ class Meme:
                       "haha": ("http://i.imgur.com/k7ebYah.jpg",
                                "http://i.imgur.com/YTuvyme.gif",
                                "http://i.imgur.com/fP3GWOF.png",
+                               "https://i.imgur.com/mAC8V9m.jpg",
                                "http://i.imgur.com/3YhGzGH.gif",
                                "http://i.imgur.com/UBXGPX4.jpg",
                                "http://i.imgur.com/SWQcgX2.jpg",
@@ -175,7 +180,7 @@ class Meme:
     async def haha(self, ctx):
         await ctx.send(embed=random.choice(self.meme_haha))
 
-    @commands.command()
+    @commands.command(aliases=["( ͡° ͜ʖ ͡°)"])
     async def smug(self, ctx):
         await ctx.send(embed=random.choice(self.meme_smug))
 
@@ -183,15 +188,15 @@ class Meme:
     async def teehee(self, ctx):
         await ctx.send(embed=random.choice(self.meme_teehee))
 
-    @commands.command()
+    @commands.command(aliases=["cry"])
     async def waa(self, ctx):
         await ctx.send(embed=random.choice(self.meme_waa))
 
-    @commands.command()
+    @commands.command(aliases=["wut","nani"])
     async def wat(self, ctx):
         await ctx.send(embed=random.choice(self.meme_wat))
 
-    @commands.command()
+    @commands.command(aliases=["mp"])
     async def police(self, ctx):
         await ctx.send(embed=random.choice(self.meme_police))
 
