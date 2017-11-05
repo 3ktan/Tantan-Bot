@@ -4,7 +4,7 @@ from tantanyan.utils import config, id
 import discord.utils
 
 
-#check admin or mod-who has permission
+#check admin
 def is_owner(message):
     async def check_func(ctx):
         if ctx.message.author.id == id.admin_id:
@@ -19,37 +19,12 @@ def is_owner(message):
             return False
     return commands.check(check_func)
 
+# check or mod-who has permission
+def check_mod(ctx):
+    return ctx.channel.permissions_for(ctx.message.author).manage_guild
 
-def check_permissions(ctx, perms):
-    msg = ctx.message
-    if is_owner(msg):
-        return True
-
-    ch = msg.channel
-    author = msg.author
-    resolved = ch.permissions_for(author)
-    return all(getattr(resolved, name, None) == value for name, value in perms.items())
-
-def role_or_permissions(ctx, check, **perms):
-    if check_permissions(ctx, perms):
-        return True
-
-    ch = ctx.message.channel
-    author = ctx.message.author
-    if ch.is_private:
-        return False
-
-    role = discord.utils.find(check, author.roles)
-    return role is not None
-
-def mod_only(**perms):
-    async def predicate(ctx):
-        x = random.choice([ctx.author.mention + ", you do not have permission to do that",
-                           ])
-        await ctx.send(x)
-        return role_or_permissions(ctx, lambda r: r.name in ('Moderator', 'Admin'), **perms)
-
-    return commands.check(predicate)
+def mod_only():
+    return commands.check(check_mod)
 
 #check test server
 def check_test_server(ctx):
