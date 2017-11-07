@@ -25,7 +25,9 @@ class Help_module:
                       "`//help meme`: List meme\n"
                       "`//help pso2`: Phantasy Star Online 2\n"
                       "`//help other`: some stupid things \n"
-                      "`//help translate`: Translation to multiple languages \n")
+                      "`//help translate`: Translation to multiple languages \n"
+                      ""
+                      "`//donate`: Thank you for all your support~")
             await ctx.send(embed=embed)
 
 
@@ -69,7 +71,10 @@ class Help_module:
         )
         embed.add_field(
             name="Server:",
-            value="`//kick @someone`: kick someone out the server"
+            value=  "`//kick @someone`: kick someone out the server\n"
+                    "`//ban @someone reason`: you need a reason before you ban anyone\n"
+                    "`//unban @sonmeone`: unban someone\n"
+                    "`//banlist`: server's banlist"
         )
         await ctx.send(embed=embed)
 
@@ -117,6 +122,7 @@ class Help_module:
                   "`//wat`,`//nani`,`//wut`: Nani the facka? \n"
                   "`//police`,`//mp`: Hello onii-chan, FBI waiting for you \n"
                   "`//salt`: Want some salt?\n"
+                  "`//lenny` : ( ͡° ͜ʖ ͡°)\n"
         )
         await ctx.send(embed=embed)
 
