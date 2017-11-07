@@ -1,3 +1,9 @@
-sever_test_id = 323727595914919957
+# READ: IF THIS IS THE "id.py.sample" FILE AND THERE IS NO "id.py" FILE
+# THEN EDIT THE id.py FILE
 
-admin_id = your own id
+sever_test_id = 323727595914919957
+# This is my server: https://discord.gg/36cxtqu
+# You do not need to change this
+
+admin_id = 270757591418667010
+#Put your user ID here

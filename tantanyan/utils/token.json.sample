@@ -1,5 +1,10 @@
+// Change file name from "token.json.sample" to "token.json" if these is no "token.json" file
+
 {
     "token": "your bot token",
+    // If you do not know what your token is,
+    // you can get it on your bot's control panel page on https://discordapp.com/developers/applications/me
+
     "prefix": "//",
+    // You can change prefix to whatever you want or keep it
 }
-// change file name from token.json.sample to token.json
