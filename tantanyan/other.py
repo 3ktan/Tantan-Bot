@@ -7,7 +7,7 @@ import datetime
 import aiohttp
 import re
 from tantanyan.utils import config
-
+import traceback
 
 class Other:
     def __init__(self, bot):
@@ -112,6 +112,35 @@ class Other:
             message = "Something went terribly wrong! [{}]".format(e)
             await ctx.send(message)
 
+    #have money? may you give to me?! 'v'
+    @commands.command()
+    async def donate(self, ctx):
+        await ctx.send("Thank you for all your support~ \nhttps://www.paypal.me/3ktan")
 
+    #feedback
+    @commands.command()
+    async def feedback(self, ctx, *, mess: str):
+        try:
+            embed = discord.Embed(
+                title="Message",
+                description=f"`Username`:{ctx.author.name} / {ctx.author.id}\n"
+                        f"`Server`: {ctx.guild.name} / {ctx.guild.id}\n"
+                        f"`Channel`: {ctx.channel.name} / {ctx.channel.id}\n"
+                        f"`Content`: {mess}\n"
+            )
+            await self.bot.get_guild(323727595914919957).get_channel(377660979439206401).send(embed=embed)
+            await ctx.send("Message has send")
+        except discord.errors.Forbidden:
+            await ctx.send("Missing Access")
+            await ctx.send(format(traceback.format_exc()))
+
+    @commands.command()
+    async def back(self, ctx, userid: int, serverid: int, channelid: int, *, mess: str):
+        try:
+            await self.bot.get_guild(serverid).get_channel(channelid).send(f"<@{userid}>: \n{mess}")
+            # await ctx.send("Message has send")
+        except discord.errors.Forbidden:
+            await ctx.send("Missing Access")
+            await ctx.send(format(traceback.format_exc()))
 def setup(bot):
     bot.add_cog(Other(bot))

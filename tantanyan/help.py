@@ -24,10 +24,9 @@ class Help_module:
                       "`//help server:` Get information about a server \n"
                       "`//help meme`: List meme\n"
                       "`//help pso2`: Phantasy Star Online 2\n"
-                      "`//help other`: some stupid things \n"
+                      "`//help other`: Some stupid things _(:3 \n"
                       "`//help translate`: Translation to multiple languages \n"
-                      ""
-                      "`//donate`: Thank you for all your support~")
+                      "")
             await ctx.send(embed=embed)
 
 
@@ -148,10 +147,12 @@ class Help_module:
         embed.add_field(
             name="Some stupid things",
             value="`//textflip`: Flipping some text, applies only to letters in alphabet (A-Z, a-z) and numbers (0-9)- eg: //textflip 3ktan-chan\n"
-                  "`//poke`: poke me _(:3 \n"
+                  "`//poke`: poke bot ~~(but be carefull)~~ \n"
                   "`//countdown`: eg: //countdown 5 \n"
                   "`//ping`: pong\n"
                   "`//utb` or `//youtube`: seach on youtube - eg: //utb pso2 3ktan\n"
+                  "`//feedback content`: Gives feedback about the bot - eg: //feedback I found some bugs, and this is a resuilt: <https://i.imgur.com/aS2CPTX.png> \n"
+                  "`//donate`: Thank you for all your support~\n"
         )
         await ctx.send(embed=embed)
 

@@ -95,7 +95,8 @@ class Server_module:
                                    "{}, you have to give me permission to kich them".format(ctx.author.mention),
                                    "Come on, if {}-chan don't give me permission, I can't kick anyone out. ｍ（＿　＿；；ｍ".format(ctx.author.mention),
                                    "Wanna kick someone? Give me permission, first! OAO",
-                                   "`Kick Members`, I want that! :\"<"
+                                   "`Kick Members`, I want that! :\"<",
+                                   "https://i.imgur.com/QJrmy3N.png"
                                    ])
                 await ctx.send(x)
 
@@ -141,7 +142,8 @@ class Server_module:
                                        "{}, you have to give me permission to ban them".format(ctx.author.mention),
                                        "Come on, if {}-chan don't give me permission, I can't ban anyone. ｍ（＿　＿；；ｍ".format(ctx.author.mention),
                                        "Wanna ban someone? Give me permission, first! OAO",
-                                       "`Ban Members`, I want that! :\"<"
+                                       "`Ban Members`, I want that! :\"<",
+                                       "https://i.imgur.com/QTlFbZl.png",
                                        ])
                     await ctx.send(x)
                 return
@@ -153,17 +155,61 @@ class Server_module:
         try:
             banlist = await ctx.guild.bans()
         except discord.errors.Forbidden:
-            await ctx.send(
-                "Hey. Uh. Sorry to break it to you, but I don't have the `Ban Members` permission, which also allows to unban.")
+            x = random.choice({"I don't have the `Ban Members` permission... <_<",
+                               "I don't have permission to unban anyone! '_'",
+                               "{}, you have to give me permission to unban them".format(ctx.author.mention),
+                               "Come on. How can i unban someone if i don't have Ban Member permission? ｍ（＿　＿；；ｍ",
+                               "Wanna unban someone? Give me permission, first! OAO",
+                               "`Ban Members`, I need that! :\"<",
+                               "https://i.imgur.com/QTlFbZl.png",
+                               })
+            await ctx.send(x)
             return
         user = None
         for ban in banlist:
-            if ban.user.name == username:
-                user = ban.user
-        if user is None:
-            await ctx.send("For somewhat reason, `{}` isn't on the banlist.".format(username))
+            ctx.send(ban)
+            # if ban.user.name == username:
+            #     user = username
+            #     break
+        # if user is None:
+        #     x = random.choice([f"For somewhat reason, `{format(username)}` isn't on the banlist.",
+        #                        f"`{format(username)}` is not on the banlist",
+        #                        "No one has that name on banlist, please check again",
+        #                        ])
+        #     await ctx.send(x)
+        #     return
+        # await ctx.guild.unban(user)
+        # await ctx.send("Pardoned `{}`.".format(user))
+
+    #Displays the server's banlist
+    @commands.command()
+    @check.mod_only()
+    async def banlist(self, ctx):
+        try:
+            banlist = await ctx.guild.bans()
+        except discord.errors.Forbidden:
+            x = random.choice(["I don't have the `Ban Members` permission... \">_>",
+                               "Can't list them without the `Ban Members` permission.",
+                               "`Ban Members`, I need that to show banlist! :\"<",
+                               "https://i.imgur.com/QTlFbZl.png",
+                               ])
+            await ctx.send(x)
             return
-        await ctx.guild.unban(user)
-        await ctx.send("Pardoned `{}`.".format(user))
+        bancount = len(banlist)
+        display_bans = []
+        bans = None
+        if bancount == 0:
+            bans = "No one's banned."
+        else:
+            for ban in banlist:
+                if len(", ".join(display_bans)) < 1800:
+                    display_bans.append(str(ban.user))
+                else:
+                    bans = ", ".join(display_bans) + "\n... and {} more".format(len(banlist) - len(display_bans))
+                    break
+        if not bans:
+            bans = ", ".join(display_bans)
+        await ctx.send("Total bans: `{}`\n```{}```".format(bancount, bans))
+
 def setup(bot):
     bot.add_cog(Server_module(bot))
