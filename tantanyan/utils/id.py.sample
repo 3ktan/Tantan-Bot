@@ -5,5 +5,10 @@ sever_test_id = 323727595914919957
 # This is my server: https://discord.gg/36cxtqu
 # You do not need to change this
 
+feedback_channel = 377660979439206401
+# This is channel which people can send message for you, although they are not in this server
+# eg: https://i.imgur.com/aS2CPTX.png
+# You do not need to change this
+
 admin_id = 270757591418667010
-#Put your user ID here
+# Put your user ID here
