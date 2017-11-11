@@ -40,14 +40,14 @@ class test:
                 await message.channel.send(embed=embed)
 
     #add reaction
-    @commands.command(name='pressf')
-    async def pressf(self, ctx, *, to: str=None):
-        # await ctx.message.delete()
-        if not to:
-            to = "RIP"
-        await ctx.send(f'**[Press F to {to}]**')
-        msg = await ctx.send(':pressf:')
-        await msg.add_reaction(u'👆')
+    # @commands.command(name='pressf')
+    # async def pressf(self, ctx, *, to: str=None):
+    #     # await ctx.message.delete()
+    #     if not to:
+    #         to = "RIP"
+    #     await ctx.send(f'**[Press F to {to}]**')
+    #     msg = await ctx.send(':pressf:')
+    #     await msg.add_reaction(u'👆')
 
     # @commands.command()
     # async def seach(self, ctx, *, name: str):
@@ -69,16 +69,16 @@ class test:
     #     except:
     #         await ctx.send("No data.")
 
-    @commands.command( aliases=[""])
-    async def emo(self, ctx):
-        keys = ("Icon_HP", "Icon_Armor", "Icon_Evasion")
-        emoji = {}
-        test_guild = self.bot.get_guild(id.sever_test_id)
-        for key in keys:
-            emoji[key] = discord.utils.find(lambda e: e.name == key, test_guild.emojis)
-        msg = await ctx.send(embed=discord.Embed(
-            description=f"{emoji['Icon_HP']} HP: 15\n{emoji['Icon_Armor']} Armor: 6 (19)\n{emoji['Icon_Evasion']} Evasion: 42 (79)"))
-        await msg.add_reaction(u'👆')
+    # @commands.command( aliases=[""])
+    # async def emo(self, ctx):
+    #     keys = ("Icon_HP", "Icon_Armor", "Icon_Evasion")
+    #     emoji = {}
+    #     test_guild = self.bot.get_guild(id.sever_test_id)
+    #     for key in keys:
+    #         emoji[key] = discord.utils.find(lambda e: e.name == key, test_guild.emojis)
+    #     msg = await ctx.send(embed=discord.Embed(
+    #         description=f"{emoji['Icon_HP']} HP: 15\n{emoji['Icon_Armor']} Armor: 6 (19)\n{emoji['Icon_Evasion']} Evasion: 42 (79)"))
+    #     await msg.add_reaction(u'👆')
 
 
     # @commands.command( )
@@ -93,23 +93,31 @@ class test:
     #     embed.set_image(url=avi)
     #     await ctx.send(embed=embed)
 
-        # test sau
-        @commands.command()
-        async def cat(self, ctx):
-            """Sends a random cute cat gifs because cats are soooo cuteeee <3 >.< -Seth, 2016"""
-            await ctx.channel.trigger_typing()
-            cat.getCat(directory="data", filename="cat", format="gif")
-            await asyncio.sleep(1)  # This is so the bot has enough time to download the file
-            await ctx.send(file=discord.File("data/cat.gif"))
+    # # test sau
+    # @commands.command()
+    # async def cat(self, ctx):
+    #     await ctx.channel.trigger_typing()
+    #     cat.getCat(directory="data", filename="cat", format="gif")
+    #     await asyncio.sleep(1)  # This is so the bot has enough time to download the file
+    #     await ctx.send(file=discord.File("data/cat.gif"))
 
-        #test sau
-        @commands.command()
-        async def quote(self, ctx):
-            """Don't quote me on that"""
-            await ctx.channel.trigger_typing()
-            await ctx.send(file=discord.File("assets/imgs/quotes/{}.png".format(
-                random.randint(1, len([file for file in os.listdir("assets/imgs/quotes")])))))
+    #test sau
+    # @commands.command()
+    # async def quote(self, ctx):
+    #     """Don't quote me on that"""
+    #     await ctx.channel.trigger_typing()
+    #     await ctx.send(file=discord.File("assets/imgs/quotes/{}.png".format(
+    #         random.randint(1, len([file for file in os.listdir("assets/imgs/quotes")])))))
 
+
+    @commands.command() 
+    async def botpermissions(self, ctx, *, channel: discord.TextChannel = None): 
+        channel = channel or ctx.channel
+        member = ctx.guild.me
+        await self.say_permissions(ctx, member, channel)
+
+    def say_permissions(self, ctx, member, channel):
+        pass
 
 
 def setup(bot):
