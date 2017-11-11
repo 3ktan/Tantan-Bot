@@ -34,10 +34,9 @@ class admiral:
             except Exception as e:
                 print("Failed reloading {}:\n{}".format(extension, traceback.format_exc()))
 
-########################## ADMIN COMMANDS ##########################
     #reload extension(s)
     @commands.command()
-    @check.is_owner()
+    @check.mod_only()
     async def rl(self, ctx, extension: str = ""):
         self.session.close()
         print("Reloading module(s)...Please wait")
@@ -52,22 +51,54 @@ class admiral:
         print("----------------------------")
         await ctx.send("Done")
 
+####################################################
     #change status
     @commands.command()
-    @check.is_owner()
+    @check.mod_only()
     async def status(self, ctx, *, stuff):
         await self.bot.change_presence(game=discord.Game(name=stuff))
 
     # logout!
-    # What lies at the bottom of the sea...?
     @commands.group(aliases=["out" ])
-    @check.is_owner()
+    @check.mod_only()
     async def logout(self, ctx):
         self.session.close()
         print("Thanks for the hard work!")
         await ctx.send("Thanks for the hard work!")
+        self.session.close()
         await self.bot.logout()
 
+    #check bot's permission in a specific channel
+    async def say_permissions(self, ctx, member, channel):
+        permissions = channel.permissions_for(member)
+        e = discord.Embed(title="Permissions of: " + member.name ,colour=member.colour)
+        allowed, denied = [], []
+        for name, value in permissions:
+            name = name.replace('_', ' ').replace('guild', 'server').title()
+            if value:
+                allowed.append(name)
+            else:
+                denied.append(name)
+        e.add_field(name='Allowed', value='\n'.join(allowed))
+        e.add_field(name='Denied', value='\n'.join(denied))
+        await ctx.send(embed=e)
+
+    @commands.command(aliases=['botpermissions'])
+    @check.mod_only()
+    async def botper(self, ctx, *, channel: discord.TextChannel = None):
+        channel = channel or ctx.channel
+        member = ctx.guild.me
+        # await ctx.send(member.name + "'s permissions:")
+        await self.say_permissions(ctx, member, channel)
+
+    @commands.command(aliases=['permissions'])
+    @check.mod_only()
+    async def userper(self, ctx, member: discord.Member = None, channel: discord.TextChannel = None):
+        channel = channel or ctx.channel
+        if member is None:
+            member = ctx.author
+        # await ctx.send(member.name + "'s permissions:")
+        await self.say_permissions(ctx, member, channel)
 
 
 def setup(bot):

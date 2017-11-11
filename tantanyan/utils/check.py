@@ -3,6 +3,20 @@ import random
 from tantanyan.utils import config, id
 import discord.utils
 
+#check admin
+def is_3ktan():
+    async def check_func(ctx):
+        if ctx.message.author.id == id.admin_id:
+            return True
+        else:
+            x = random.choice([ctx.author.mention + " go away",
+                               "...Do not order me if you're not 3ktan-chan, " + ctx.author.mention,
+                               "Don't touch me! :anger: ",
+                               ":anger:  :anger:  :anger: "
+                               ])
+            await ctx.send(x)
+            return False
+    return commands.check(check_func)
 
 #check admin
 def is_owner(message):
@@ -10,12 +24,6 @@ def is_owner(message):
         if ctx.message.author.id == id.admin_id:
             return True
         else:
-            x = random.choice([ctx.author.mention + " go away",
-                               "...Do not order me if you're not admin, "+ctx.author.mention,
-                               "Don't touch me! :anger: ",
-                               ":anger:  :anger:  :anger: "
-                               ])
-            await ctx.send(x)
             return False
     return commands.check(check_func)
 
