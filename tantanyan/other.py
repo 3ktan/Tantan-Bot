@@ -44,7 +44,6 @@ class Other:
                            "Really, being alone makes me feel relieved. I like being alone better... Yep.",
                            "Seriously, this is no joke. :bangbang: ",
                            "If you don't like me, why don't you remove me from the fleet? ... It's not like it b-bothers me.",
-                           "How many times, do I have to say before you understand!? What I hate the most is the shitty Admiral!! ...Why won't you believe what I said?",
                            "angry"])
         if (x =="angry"):
             a = random.choice(["https://i.imgur.com/bdTXxXs.jpg",
@@ -144,5 +143,26 @@ class Other:
         except discord.errors.Forbidden:
             await ctx.send("Missing Access")
             # await ctx.send(format(traceback.format_exc()))
+
+    #creak link to invite bot
+    @commands.command(aliases=['invite'])
+    async def join(self, ctx, idbot=None):
+        perms = discord.Permissions.none()
+        perms.read_messages = True
+        perms.external_emojis = True
+        perms.send_messages = True
+        perms.manage_roles = True
+        perms.manage_channels = True
+        perms.ban_members = True
+        perms.kick_members = True
+        perms.manage_messages = True
+        perms.embed_links = True
+        perms.read_message_history = True
+        perms.attach_files = True
+        perms.add_reactions = True
+        if idbot is None:
+            await ctx.send(f'<{discord.utils.oauth_url(self.bot.user.id, perms)}>')
+        else:
+            await ctx.send(f'<{discord.utils.oauth_url(idbot, perms)}>')
 def setup(bot):
     bot.add_cog(Other(bot))
