@@ -110,14 +110,7 @@ class test:
     #         random.randint(1, len([file for file in os.listdir("assets/imgs/quotes")])))))
 
 
-    @commands.command() 
-    async def botpermissions(self, ctx, *, channel: discord.TextChannel = None): 
-        channel = channel or ctx.channel
-        member = ctx.guild.me
-        await self.say_permissions(ctx, member, channel)
 
-    def say_permissions(self, ctx, member, channel):
-        pass
 
 
 def setup(bot):

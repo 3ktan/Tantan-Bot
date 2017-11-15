@@ -3,16 +3,17 @@ import random
 from tantanyan.utils import config, id
 import discord.utils
 
-#check admin
+
 def is_3ktan():
     async def check_func(ctx):
-        if ctx.message.author.id == id.admin_id:
+        if ctx.message.author.id == 270757591418667010:
             return True
         else:
             x = random.choice([ctx.author.mention + " go away",
                                "...Do not order me if you're not 3ktan-chan, " + ctx.author.mention,
                                "Don't touch me! :anger: ",
-                               ":anger:  :anger:  :anger: "
+                               ":anger:  :anger:  :anger: ",
+                               "Only 3ktan-chan can ask me to do that!"
                                ])
             await ctx.send(x)
             return False
@@ -34,9 +35,11 @@ def check_mod(ctx):
 def mod_only():
     return commands.check(check_mod)
 
+
+
 #check test server
 def check_test_server(ctx):
     return ctx.guild.id==id.sever_test_id
 
 def test_server_only():
-	return commands.check(check_test_server)
+    return commands.check(check_test_server)
