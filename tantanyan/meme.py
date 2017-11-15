@@ -87,6 +87,7 @@ class Meme:
                                  "http://blog-imgs-55.fc2.com/m/o/e/moerukabunushi/2012052622111960bs.jpg",
                                  "https://pbs.twimg.com/media/C5j7fdWUsAAZ-fz.jpg",
                                  "https://pbs.twimg.com/media/Bvz-vkrCIAAJK4R.jpg",
+                                 "https://i.imgur.com/zYDTZgi.jpg",
                                  ),
                       "waa": ("http://i.imgur.com/LgLzolV.gif",
                               "http://i.imgur.com/81r4YWU.jpg",
@@ -105,19 +106,19 @@ class Meme:
                               "https://i.imgur.com/bVz8yLp.jpg",
                               "https://i.imgur.com/ymvCT4A.jpg",
                               ),
-                      "wat": ("http://i.imgur.com/xBeUEmh.jpg",
-                              "http://i.imgur.com/QEyMXCw.jpg",
-                              "http://i.imgur.com/cbNegmA.jpg",
-                              "http://i.imgur.com/5KeAhpE.jpg",
+                      "wat": ( "http://i.imgur.com/cbNegmA.jpg",
                               "http://i.imgur.com/AfzgsTO.jpg",
                               "http://i.imgur.com/Zkn67Wx.png",
                               "http://i.imgur.com/9V1ztaP.jpg",
                               "http://i.imgur.com/6HuNiHj.jpg",
                               "http://i.imgur.com/ARdiefz.png",
-                              "https://img.memecdn.com/anime-version-wat_o_2196743.jpg",
-                              "http://i.imgur.com/UXbTMTt.jpg",
                               "https://i.imgur.com/DupP8WR.png",
-                              "https://i.imgflip.com/1majz3.jpg",
+                               "https://i.imgur.com/cj40D7x.jpg",
+                              ),
+                      "wut": ("https://i.imgur.com/i97Qedz.jpg",
+                              "https://i.imgur.com/HXxbMx2.jpg",
+                              "https://i.imgur.com/77uPDnH.jpg",
+                              "https://i.imgur.com/9481pXn.jpg",
                               ),
                       "police": ("http://i.imgur.com/CYimeUd.jpg",
                                  "http://i3.kym-cdn.com/photos/images/newsfeed/001/176/546/a72.jpg",
@@ -136,6 +137,10 @@ class Meme:
                                 "http://i.imgur.com/yNqtdVX.jpg",
                                 "https://i.imgur.com/xAQw8pK.gif",
                                 "http://i2.kym-cdn.com/photos/images/newsfeed/000/936/668/a3e.jpg",
+                                 "https://i.imgur.com/uAfFojF.jpg",
+                                 "https://i.imgur.com/VqiKQWr.jpg",
+                                 "https://i.imgur.com/Ih0hMU9.png",
+                                 "https://i.imgur.com/v0ugyB8.png",
                                  ),
                       "salt": ("http://i.imgur.com/lzfdjBi.jpg",
                                "http://i.imgur.com/c0tnUoR.jpg",
@@ -149,10 +154,13 @@ class Meme:
                                "https://i.imgur.com/jyH9p7I.png",
                                "https://i.pinimg.com/474x/59/4c/46/594c46cd5a97af5cc8a78353211120fb--chibi-characters-kawaii.jpg",
                                "https://farm3.static.flickr.com/2834/32026289914_9040816149_b.jpg",
+                               "https://i.imgur.com/0qeD1JD.jpg",
                                ),
-                      # "feel": ("https://media.giphy.com/media/fxAx4sHwCO21G/giphy.gif",
-                      #
-                      #      ),
+                      "suicide": ("https://i.imgur.com/bmOqRTP.jpg",
+                                  "https://i.imgur.com/HmbFzRC.png",
+                                  "https://i.imgur.com/NPMwY2e.jpg",
+                                  "https://i.imgur.com/lKgGp8i.png",
+                                 ),
                       # "": ("",
                       #
                       #      ),
@@ -192,9 +200,13 @@ class Meme:
     async def waa(self, ctx):
         await ctx.send(embed=random.choice(self.meme_waa))
 
-    @commands.command(aliases=["wut","nani"])
+    @commands.command(aliases=["what",])
     async def wat(self, ctx):
         await ctx.send(embed=random.choice(self.meme_wat))
+
+    @commands.command(aliases=["nani!!!"])
+    async def wut(self, ctx):
+        await ctx.send(embed=random.choice(self.meme_wut))
 
     @commands.command(aliases=["mp"])
     async def police(self, ctx):
@@ -203,5 +215,20 @@ class Meme:
     @commands.command()
     async def salt(self, ctx):
         await ctx.send(embed=random.choice(self.meme_salt))
+
+    @commands.command()
+    async def lenny(self, ctx):
+        await ctx.send("( ͡° ͜ʖ ͡°)")
+
+    @commands.command()
+    async def suicide(self, ctx):
+        await ctx.send(embed=random.choice(self.meme_suicide))
+
+    @commands.command(aliases=["kidney","$"])
+    async def money(self, ctx):
+        embed = discord.Embed( )
+        embed.set_image(url="https://i.imgur.com/4T1o44K.jpg")
+        await ctx.send(embed=embed)
+
 def setup(bot):
     bot.add_cog(Meme(bot))
