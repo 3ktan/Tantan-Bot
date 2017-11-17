@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
 from tantanyan.utils import config
-
+import aiohttp
+import json
 
 class Pso2:
     def __init__(self, bot):
@@ -23,7 +24,72 @@ class Pso2:
     # @pso2.command()
     # async def newbie(self,ctx):
     #     await ctx.send("https://goo.gl/Z5UnRq")
+    @commands.command(pass_context=True)
+    async def item(self, ctx, *, itemname : str):
+        async with aiohttp.ClientSession() as session:
+            url = "http://db.kakia.org/item/search?name={0}".format(itemname.replace(" ", "%20"))
+            r = await session.get(url)
+            if r.status == 200:
+                js = await r.json()
+                embed = discord.Embed()
+                if js:
+                    if len(js) >= 1 and len(js) <= 10:
+                        for result in js:
+                            if result["EnName"]:
+                                endesc = result['EnDesc'].replace("\n", "")
+                                embed.add_field(
+                                    name="Resuilts:",
+                                    value=f"**EN Name:** {format(result['EnName'])} - **JP Name:** {format(result['JpName'])}\n"
+                                            f"**Desc:** {endesc} \n "
+                                )
+                        await ctx.send(embed=embed)
+                    elif len(js) > 10:
+                        await ctx.send("{} Found too many items matching {}. Please try a more specific search.".format(ctx.message.author.mention, itemname))
+                else:
+                    await ctx.send("{} Could not find ``{}``.".format(ctx.message.author.mention, itemname))
 
+    @commands.command(pass_context=True)
+    async def price(self, ctx, *, itemname: str):
+        async with aiohttp.ClientSession() as session:
+            url = "http://db.kakia.org/item/search?name={0}".format(itemname.replace(" ", "%20"))
+            r = await session.get(url)
+            if r.status == 200:
+                js = await r.json()
+                embed = discord.Embed()
+                if js:
+                    if len(js) >= 1 and len(js) <= 10:
+                        for result in js:
+                            if result["EnName"]:
+                                embed.add_field(
+                                    name="Success",
+                                    value=ctx.author.mention,
+                                    inline=False
+                                )
+                                embed.add_field(
+                                    name="Searched for:",
+                                    value=f"**EN Name:** {format(result['EnName'])} \n**JP Name:** {format(result['JpName'])}"
+                                )
+                            if result['PriceInfo'] is not None:
+                                pri = "\n"
+                                for PriceInfo in result['PriceInfo']:
+                                    pri  = pri + "Ship `" + format(PriceInfo['Ship']) + "`  :   " + format(PriceInfo['Price'],',d')+ "                     - Last Updated: " + format(PriceInfo['LastUpdated']) + "\n"
+                                embed.add_field(
+                                    name="Cheapest from each ship:",
+                                    value=pri,
+                                    inline=False
+                                )
+                            else:
+                                embed.add_field(
+                                    name="Price: ",
+                                    value="Unknown",
+                                    inline=False
+                                )
+
+                        await ctx.send(embed=embed)
+                    elif len(js) > 10:
+                        await ctx.send("{} Found too many items matching {}. Please try a more specific search.".format(ctx.message.author.mention, itemname))
+                else:
+                    await ctx.send("{} Could not find ``{}``.".format(ctx.message.author.mention, itemname))
 
 
 def setup(bot):
