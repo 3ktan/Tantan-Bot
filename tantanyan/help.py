@@ -18,7 +18,7 @@ class Help_module:
             embed.add_field(
                 name="Standard Commands List ",
                 value="`//mod`: commands for mod\n"
-                      "`//inv`: Invite bot to your server\n"
+                      "`//join`: Invite bot to your server\n"
                       "`//about:` description about Bot & Athor\n"
                       "`//help user:` Get information about a user \n"
                       "`//help server:` Get information about a server \n"
@@ -28,18 +28,6 @@ class Help_module:
                       "`//help translate`: Translation to multiple languages \n"
                       "")
             await ctx.send(embed=embed)
-
-
-    @commands.command()
-    async def inv(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.teal(),
-            )
-        embed.add_field(
-            name="Invite Link:",
-            value="https://goo.gl/VM2xRn"
-        )
-        await ctx.send(embed=embed)
 
     @commands.command()
     async def about(self, ctx):
@@ -66,6 +54,8 @@ class Help_module:
     @check.mod_only()
     async def mod(self, ctx):
         embed = discord.Embed(
+            title="Commands",
+            description="Only admin, mods or user, who has permissions, can use the following commands",
             colour=discord.Colour.teal(),
         )
         embed.add_field(
@@ -73,7 +63,13 @@ class Help_module:
             value=  "`//kick @someone`: kick someone out the server\n"
                     "`//ban @someone reason`: you need a reason before you ban anyone\n"
                     "`//unban @sonmeone`: unban someone\n"
-                    "`//banlist`: server's banlist"
+                    "`//banlist`: server's banlist\n"
+        )
+        embed.add_field(
+            name="Other:",
+            value=  "`//botper`: check bot's permission in a specific channel\n"
+                    "`//userper @someone`: check user's permission in a specific channel\n"
+                    "`//prune <number>`: Deletes multiple messages at once\n"
         )
         await ctx.send(embed=embed)
 
@@ -101,6 +97,8 @@ class Help_module:
         embed.add_field(
             name="Standard Commands List ",
             value= "`//pso2`: Link Related to PSO: bumped, swiki,..\n"
+                   "`//item <item's name>`: Seach for item\n"
+                   "`//price <ite's name>`: Seach price of item\n"
                    )
         await ctx.send(embed=embed)
 
@@ -118,10 +116,13 @@ class Help_module:
                   "`//smug`: \n"
                   "`//teehee`: \n"
                   "`//waa`,`//cry`: Wanna cry?\n"
-                  "`//wat`,`//nani`,`//wut`: Nani the facka? \n"
+                  "`//wat`, `//what`: what?\n"
+                  "`//wut`, `//nani!`: Nani the facka?!! \n"
                   "`//police`,`//mp`: Hello onii-chan, FBI waiting for you \n"
                   "`//salt`: Want some salt?\n"
                   "`//lenny` : ( ͡° ͜ʖ ͡°)\n"
+                  "`//heartattack`, `//nosebleed`\n"
+                  "`//justasplanned`\n"
         )
         await ctx.send(embed=embed)
 
@@ -135,6 +136,19 @@ class Help_module:
             name="List commands:",
             value="`//server`: about server\n"
                   "`//servericon`: server's icon\n"
+        )
+        await ctx.send(embed=embed)
+
+    @help.command()
+    async def translate(self, ctx):
+        embed = discord.Embed(
+            title="//help translate",
+            colour=discord.Colour.teal(),
+            description="")
+        embed.add_field(
+            name="Translation",
+            value="`//translate <language> <text>:` Translation to multiple languages - eg: `//translate japanese cute!!` \n"
+                  "`//trans`: translation to english - eg: `//trans ありがとう` \n"
         )
         await ctx.send(embed=embed)
 
@@ -153,20 +167,12 @@ class Help_module:
                   "`//utb` or `//youtube`: seach on youtube - eg: //utb pso2 3ktan\n"
                   "`//feedback content`: Gives feedback about the bot - eg: //feedback I found some bugs, and this is a resuilt: <https://i.imgur.com/aS2CPTX.png> \n"
                   "`//donate`: Thank you for all your support~\n"
+                  "`//join <bot's id>`: Creak link to invite bot to another server, you can create link of another bot if you know its id\n"
+
+
         )
         await ctx.send(embed=embed)
 
-    @help.command()
-    async def translate(self, ctx):
-        embed = discord.Embed(
-            title="//help translate",
-            colour=discord.Colour.teal(),
-            description="")
-        embed.add_field(
-            name="Translation",
-            value="`//translate <language> <text>:` Translation to multiple languages - eg: `//translate japanese cute!!` \n"
-                  "`//trans`: translation to english - eg: `//trans ありがとう` \n"
-        )
-        await ctx.send(embed=embed)
+
 def setup(bot):
     bot.add_cog(Help_module(bot))

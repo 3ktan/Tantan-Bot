@@ -27,6 +27,12 @@ class Meme:
                               "http://static.tvtropes.org/pmwiki/pub/images/critical_kick_4026.png",
                               "https://cdn.weeb.sh/images/HkZ6v0FOb.gif",
                               "https://i.imgur.com/LSjmc5f.jpg",
+                              "https://i.imgur.com/6gSoKkn.jpg",
+                              "https://i.imgur.com/Xykccyf.png",
+                              "https://i.imgur.com/mLjtoQb.jpg",
+                              "https://i.imgur.com/833wim4.png",
+                              "https://i.imgur.com/oVnZtq6.jpg",
+                              "https://i.imgur.com/wNsbcTC.jpg",
                               ),
                       "fack": ( "http://i.imgur.com/0yNkFvN.jpg",
                                 "http://i.imgur.com/yoE4tuK.jpg",
@@ -114,11 +120,14 @@ class Meme:
                               "http://i.imgur.com/ARdiefz.png",
                               "https://i.imgur.com/DupP8WR.png",
                                "https://i.imgur.com/cj40D7x.jpg",
+                               "https://i.imgur.com/hMq92mO.jpg",
                               ),
                       "wut": ("https://i.imgur.com/i97Qedz.jpg",
                               "https://i.imgur.com/HXxbMx2.jpg",
-                              "https://i.imgur.com/77uPDnH.jpg",
                               "https://i.imgur.com/9481pXn.jpg",
+                              "https://i.imgur.com/lI6WGq6.jpg",
+                              "https://i.imgur.com/iM6757u.jpg",
+                              "https://i.imgur.com/BeRwU4o.jpg",
                               ),
                       "police": ("http://i.imgur.com/CYimeUd.jpg",
                                  "http://i3.kym-cdn.com/photos/images/newsfeed/001/176/546/a72.jpg",
@@ -141,6 +150,10 @@ class Meme:
                                  "https://i.imgur.com/VqiKQWr.jpg",
                                  "https://i.imgur.com/Ih0hMU9.png",
                                  "https://i.imgur.com/v0ugyB8.png",
+                                 "https://i.imgur.com/l0hA8bo.jpg",
+                                 "https://i.imgur.com/mR1zqYw.jpg",
+                                 "https://i.imgur.com/Ms3WK7V.jpg",
+                                 "https://i.imgur.com/JuBsz4O.gif",
                                  ),
                       "salt": ("http://i.imgur.com/lzfdjBi.jpg",
                                "http://i.imgur.com/c0tnUoR.jpg",
@@ -161,6 +174,16 @@ class Meme:
                                   "https://i.imgur.com/NPMwY2e.jpg",
                                   "https://i.imgur.com/lKgGp8i.png",
                                  ),
+                      "heartattack": ("https://i.imgur.com/aj5T5a2.jpg",
+                                      "https://i.imgur.com/XyeMgaO.png",
+                                      "https://i.imgur.com/jxgYd26.png",
+                                      "https://i.imgur.com/LAsVXhK.jpg",
+                                      "https://i.imgur.com/k3HGTRd.png",
+
+                           ),
+                      "justasplanned": ("https://i.imgur.com/Uw7jbUn.jpg",
+
+                           ),
                       # "": ("",
                       #
                       #      ),
@@ -204,7 +227,7 @@ class Meme:
     async def wat(self, ctx):
         await ctx.send(embed=random.choice(self.meme_wat))
 
-    @commands.command(aliases=["nani!!!"])
+    @commands.command(aliases=["nani!"])
     async def wut(self, ctx):
         await ctx.send(embed=random.choice(self.meme_wut))
 
@@ -230,5 +253,12 @@ class Meme:
         embed.set_image(url="https://i.imgur.com/4T1o44K.jpg")
         await ctx.send(embed=embed)
 
+    @commands.command(aliases=["nosebleed","heartatk"])
+    async def heartattack(self, ctx):
+        await ctx.send(embed=random.choice(self.meme_heartattack))
+
+    @commands.command()
+    async def justasplanned(self, ctx):
+        await ctx.send(embed=random.choice(self.meme_justasplanned))
 def setup(bot):
     bot.add_cog(Meme(bot))
