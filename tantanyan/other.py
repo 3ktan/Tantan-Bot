@@ -1,13 +1,13 @@
 import discord
 from discord.ext import commands
-from tantanyan.utils import check
 import random
-from urllib.parse import quote_plus
 import datetime
 import aiohttp
 import re
 from tantanyan.utils import config, id
 import traceback
+import asyncio
+import json
 
 class Other:
     def __init__(self, bot):
@@ -164,5 +164,9 @@ class Other:
             await ctx.send(f'<{discord.utils.oauth_url(self.bot.user.id, perms)}>')
         else:
             await ctx.send(f'<{discord.utils.oauth_url(idbot, perms)}>')
+
+
+
+
 def setup(bot):
     bot.add_cog(Other(bot))

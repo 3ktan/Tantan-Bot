@@ -5,6 +5,7 @@ from .utils import check
 import aiohttp
 from tantanyan.utils import config
 import  traceback
+import asyncio
 
 class admiral:
     def __init__(self,bot):
@@ -36,7 +37,7 @@ class admiral:
 
     #reload extension(s)
     @commands.command()
-    @check.mod_only()
+    @check.is_3ktan()
     async def rl(self, ctx, extension: str = ""):
         self.session.close()
         print("Reloading module(s)...Please wait")
@@ -54,19 +55,20 @@ class admiral:
 ####################################################
     #change status
     @commands.command()
-    @check.mod_only()
+    @check.is_3ktan()
     async def status(self, ctx, *, stuff):
         await self.bot.change_presence(game=discord.Game(name=stuff))
 
     # logout!
     @commands.group(aliases=["out" ])
-    @check.mod_only()
+    @check.is_3ktan()
     async def logout(self, ctx):
         self.session.close()
         print("Thanks for the hard work!")
         await ctx.send("Thanks for the hard work!")
         self.session.close()
         await self.bot.logout()
+####################################################################################
 
     #check bot's permission in a specific channel
     async def say_permissions(self, ctx, member, channel):
@@ -99,6 +101,24 @@ class admiral:
             member = ctx.author
         # await ctx.send(member.name + "'s permissions:")
         await self.say_permissions(ctx, member, channel)
+
+    #delete message
+    @commands.command(pass_context=True, aliases=['prune'], hidden=True)
+    @check.mod_only()
+    async def purge(self, ctx, *limit):
+        try:
+            limit = int(limit[0])
+        except IndexError:
+            limit = 1
+        deleted = 0
+        while limit >= 1:
+            cap = min(limit, 100)
+            deleted += len(await ctx.message.channel.purge( limit=cap, before=ctx.message))
+            limit -= cap
+        tmp = await ctx.send('**:put_litter_in_its_place:** {0} messages was deleted'.format(deleted))
+        await asyncio.sleep(15)
+        await self.bot.delete_message(tmp)
+        await self.bot.delete_message(ctx.message)
 
 
 def setup(bot):

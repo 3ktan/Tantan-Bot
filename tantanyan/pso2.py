@@ -14,8 +14,8 @@ class Pso2:
     async def pso2(self, ctx):
         if ctx.invoked_subcommand is None:
             await ctx.send("Link Related \n"
-                           "Newbie: <https://goo.gl/Z5UnRq> \n"
-                           "Mag: <https://goo.gl/qUuXE1> \n"
+                           "Download game: <http://arks-layer.com> / Discord: <http://discord.gg/pso2>\n"
+                           "Guild for Newbie: <https://goo.gl/Z5UnRq> (VNese)\n"
                            "Skill tree: <https://goo.gl/JtZmeL> \n"
                            "Swiki: <http://pso2.swiki.jp/index.php> \n"
                            "Bumped: <http://www.bumped.org/psublog/> \n"
